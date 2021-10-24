@@ -80,7 +80,7 @@ public class DSAndAlgorithms {
 		        a) Input: n = 4
 		           Output: 10 i.e. (1 + 2 + 3 + 4)
 		           
-             A. 1) public int findSum(int n) {
+		     A. 1) public int findSum(int n) {
                        return n * (n + 1) / 2;
                    }
 	               
