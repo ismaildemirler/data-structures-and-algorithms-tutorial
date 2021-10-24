@@ -81,16 +81,16 @@ public class DSAndAlgorithms {
 		           Output: 10 i.e. (1 + 2 + 3 + 4)
 		           
 		     A. 1) public int findSum(int n) {
-                       return n * (n + 1) / 2;
-                   }
+					   return n * (n + 1) / 2;
+				   }
 	               
-                2) public int findSum(int n) {
-                       int sum = 0;
-                       for(int i = 1; i <= n; i++) {
-                           sum = sum + i;
-                       }
-                       return sum;
-                   }
+				2) public int findSum(int n) {
+					   int sum = 0;
+					   for(int i = 1; i <= n; i++) {
+						   sum = sum + i;
+					   }
+				 	   return sum;
+				   }
 	               
 		 * So we can see, these are the two algorithms which can solve our problem of finding the sum of first n
 		 * natural numbers, but is there any way to figure out that algorithm is better than other?
