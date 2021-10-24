@@ -78,6 +78,60 @@ public class Complexities {
 		
 		/*
 		 * Asymptotic Analysis of An Algorithm
+		 * 
+		 * We saw how time and space affects the performance of an algorithm. But usually we don't go by the exact numbers,
+		 * that how much exact time an algorithm is taking or how much space in numbers an algorithm is taking. So usually
+		 * there are mathematical models which helps us in determining the time and space complexity of an algorithm. 
+		 * Analysis which deals with those mathematical models we term them as asymptotic analysis.
+		 * 
+		 * So what do we mean by asymptotic analysis?
+	       - Asymptotic analysis helps in evaluating performance of an algorithm in terms of input size and it's increase.
+	       - Using asymptotic analysis, we don't measure actual running time of algorithm. It helps in determining how much
+	       	 time and space taken by algorithm increases with input size.
+	       - When we perform the analysis, there are certain notations which we need to know to perform the asymptotic analysis.
+		 */
+		
+		/*
+		 * Asymptotic Notations
+		 * 
+		 * Asymptotic analysis helps in evaluating performance of an algorithm in terms of input size and it's increase. 
+		 * So usually this asymptotic analysis  is being done by asymptotic notations. 
+		 * 
+		 * So what do we mean by asymptotic notations?
+	       - Asymptotic Notations are the mathematical tools used to describe the running time of an algorithm in term of 
+	         input size.
+	       - For better understanding let's consider an example: Performance of car in 1 litre of petrol.
+	         Let's say you go to a car showroom where you want to purchase a car, so the mostly you will look into the design 
+	         of the car and to the salesman, you will ask, what is the performance of car in 1 litre of petrol? How much the 
+	         car travels by using 1 litre of petrol? So basically, the salesman will never give you an exact answer, he will
+	         simply give you the numbers based on certain conditions the car is running. So he will simply tell you that if 
+	         you are running this car on a highway where the traffic is very minimum, this car can give you a mileage of 25 
+	         kilometers per litre. And if you are running it in the city where the traffic is maximum, it will give you 15 
+	         kilometers per litre. And if you are running it in the city and a highway mixed, it will give you 20 kilometers 
+	         per litre. So these answers the salesman might give you when you ask about the performance of the car. 
+	         
+	         - Highway (Minimum Traffic) --> 25 km/litre
+	         - City + Highway (Average Traffic) --> 20 km/litre
+	         - City (Maximum Traffic) --> 15 km/litre	         
+	         
+	         So when we talk an algorithm, these asymptotic notations gives us this rough idea of how an algorithm will be performing 
+	         in certain situations. So here, Asymptotic Notations help us in determining:
+	         
+	         - Best Case
+	         - Average Case
+	         - Worst Case
+	         
+	         So we can simply relate this analogy to these conditions the best case would be that if you are driving on a highway,
+	         the average case would be that you are driving in both city and highway. The worst case would be that if you are driving 
+	         in city. So this is how Asymptotic Notations provide us an in-depth description about the running of time of an algorithm
+	         in terms of it's input size.
+		 */
+		
+		/*
+		 * Types of Asymptotic Notations
+		 * 
+		   - There are three notations for performing runtime analysis of an algorithm. 
+		     - Omega Notation (Ω-notation)
 		 */
 	}
 	
