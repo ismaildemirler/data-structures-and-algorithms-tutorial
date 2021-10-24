@@ -1,13 +1,13 @@
 package data_structures_and_algorithms;
 
-import data_structures_and_algorithms.a_complexity.Complexities;
+import data_structures_and_algorithms.a_analysis.AlgorithmAnalysis;
 
 public class DSAndAlgorithms {
 
 	public static void main(String[] args) {
 
-		Complexities complexity = new Complexities();
-		complexity.timeComplexity();
+		AlgorithmAnalysis analysis = new AlgorithmAnalysis();
+		analysis.timeComplexity();
 		
 		
 	}

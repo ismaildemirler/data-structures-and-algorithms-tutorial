@@ -1,6 +1,6 @@
-package data_structures_and_algorithms.a_complexity;
+package data_structures_and_algorithms.a_analysis;
 
-public class Complexities {
+public class AlgorithmAnalysis {
 
 	public void timeComplexity() {
 		
@@ -74,7 +74,7 @@ public class Complexities {
 		 */
 	}
 	
-	private void asymptoticAnalysis() {
+	public void asymptoticAnalysis() {
 		
 		/*
 		 * Asymptotic Analysis of An Algorithm
@@ -111,15 +111,15 @@ public class Complexities {
 	         per litre. So these answers the salesman might give you when you ask about the performance of the car. 
 	         
 	         - Highway (Minimum Traffic) --> 25 km/litre
-	         - City + Highway (Average Traffic) --> 20 km/litre
-	         - City (Maximum Traffic) --> 15 km/litre	         
+	         - City (Maximum Traffic) --> 15 km/litre	
+	         - City + Highway (Average Traffic) --> 20 km/litre         
 	         
 	         So when we talk an algorithm, these asymptotic notations gives us this rough idea of how an algorithm will be performing 
 	         in certain situations. So here, Asymptotic Notations help us in determining:
 	         
 	         - Best Case
-	         - Average Case
 	         - Worst Case
+	         - Average Case
 	         
 	         So we can simply relate this analogy to these conditions the best case would be that if you are driving on a highway,
 	         the average case would be that you are driving in both city and highway. The worst case would be that if you are driving 
@@ -132,6 +132,52 @@ public class Complexities {
 		 * 
 		   - There are three notations for performing runtime analysis of an algorithm. 
 		     - Omega Notation (Ω-notation)
+		     - Big-O Notation (O-notation)
+		     - Theta Notation (Θ-notation)
+		 */
+		
+		/*
+		 * Omega Notation (Ω-notation)
+		 * 
+		   - It is the formal way to express the lower bound of an algorithm's running time.
+		   - Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
+		   - This notation determines the best case of an algorithm. Because Omega Notation provides us the best amount of time
+		     an algorithm can take to complete.
+		     
+   		 * What do we mean by the best case?
+   		 * If we sat certain algorithm takes 100 seconds as best amount of time. So, 100 seconds will be lower bound of that algorithm.
+   		 * The algorithm can take more than 100 seconds but it will not take less than 100 seconds. For example, we have a list which
+   		 * has 100 elements. If we are searching an item in that list, the best case that we are able to find wanted element is first. 
+   		 * If we lucky the first element would be the wanted element and the best case would come to true. So this notation is very least
+   		 * used because we are not interested in finding the best amount of time algorithm.
+		 */
+		
+		/*
+		 * Big-O Notation (O-notation)
+		 * 
+		   - It is the formal way to express the upper bound of an algorithm's running time. 
+		   - Upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete.
+		   - For example, if we say certain algorithms takes 100 seconds as longest amount of time. So, 100 seconds will be upper bound of
+			 that algorithm. The algorithm can take less than 100 seconds but it will not take more than 100 seconds. For another example, 
+			 we have a list which has 100 elements. If we are searching an item in that list, the worst case that we are able to find wanted 
+			 element is 100th. If we are not lucky the last element would be the wanted element and the worst case would come to true.
+		 
+		 * So, this notation is mostly used. Because we are very much interested in finding the maximum amount of time the algorithm may take
+		 * to complete. So that we can optimized algorithm to whichever time we want. The Big-O Notation basically provides us the worst case
+		 * analysis of an algorithm. By worst case, we mean that it determines the longest amount of time the algorithm may take to complete.
+		 */
+		
+		/*
+		 * Theta Notation (Θ-notation)
+		 * 
+		   - It is the formal way to express both the upper and lower bound of an algorithm's running time. 
+		   - By lower and upper bound means for any given input this notation determines average amount of time an algorithm can take to 
+		     complete. So basically the average case analysis is being determined by the Theta Notation. 
+		     For example, if we run certain algorithm and it takes 100 seconds for the first run, 120 seconds for second run, 110 for third
+		     run and so on. So Theta Notation gives an average of running time that algorithm. 
+		 
+		 * So this notation is also very leastly used. Because there are very rarely used cases where we actually determine the average time
+		 * taken by the algorithm to complete.
 		 */
 	}
 	
