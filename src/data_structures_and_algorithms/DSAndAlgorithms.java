@@ -1,8 +1,13 @@
 package data_structures_and_algorithms;
 
+import data_structures_and_algorithms.a_complexity.Complexities;
+
 public class DSAndAlgorithms {
 
 	public static void main(String[] args) {
+
+		Complexities complexity = new Complexities();
+		complexity.timeComplexity();
 		
 		
 	}
@@ -86,6 +91,7 @@ public class DSAndAlgorithms {
 				   		}
 				   		return sum;
 	               }
+	               
 	     * So we can see, these are the two algorithms which can solve our problem of finding the sum of first n
 	     * natural numbers, but is there any way to figure out that algorithm is better than other?
 	     * So in order to determine the best algorithm among these two algorithms, we usually check two things:
