@@ -92,9 +92,9 @@ public class DSAndAlgorithms {
 				   		return sum;
 	               }
 	               
-	     * So we can see, these are the two algorithms which can solve our problem of finding the sum of first n
-	     * natural numbers, but is there any way to figure out that algorithm is better than other?
-	     * So in order to determine the best algorithm among these two algorithms, we usually check two things:
+		 * So we can see, these are the two algorithms which can solve our problem of finding the sum of first n
+		 * natural numbers, but is there any way to figure out that algorithm is better than other?
+		 * So in order to determine the best algorithm among these two algorithms, we usually check two things:
 		   1) Time Complexity: How much time these algorithms are taking to complete?
 		   2) Space Complexity: How much memory these algorithms is taking to complete?
 		 */
