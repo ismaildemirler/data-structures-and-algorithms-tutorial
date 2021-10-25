@@ -1,13 +1,23 @@
 package data_structures_and_algorithms;
 
 import data_structures_and_algorithms.a_analysis.AlgorithmAnalysis;
+import data_structures_and_algorithms.a_analysis.BigONotation;
 
 public class DSAndAlgorithms {
 
 	public static void main(String[] args) {
 
-		AlgorithmAnalysis analysis = new AlgorithmAnalysis();
-		analysis.timeComplexity();
+//		AlgorithmAnalysis analysis = new AlgorithmAnalysis();
+//		analysis.timeComplexity();
+//		
+//		BigONotation bigONotation = new BigONotation();
+//		bigONotation.constantTime();
+//		bigONotation.logarithmicTime();
+//		bigONotation.linearTime();
+//		bigONotation.logLinearTime();
+//		bigONotation.polynomialTime();
+//		bigONotation.exponentialTime();
+//		bigONotation.factorialTime();
 		
 		
 	}
