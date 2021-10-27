@@ -111,7 +111,7 @@ public class LinkedListClass {
 		fourth.setNext(fifth);  // 10 --> 1 --> 8 --> 11 --> 5 --> null
 		
 		System.out.println("Singly Linked List: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -125,7 +125,7 @@ public class LinkedListClass {
 		 */
 		singlyLinkedList.addToBeginning(7);
 		System.out.println("Singly Linked List after Adding 7 to beginning: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -133,7 +133,7 @@ public class LinkedListClass {
 		 */
 		singlyLinkedList.addToEnd(33);
 		System.out.println("Singly Linked List after Adding 33 to end: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -141,7 +141,7 @@ public class LinkedListClass {
 		 */
 		singlyLinkedList.insertAt(5, 100);
 		System.out.println("Singly Linked List after inserting 100 at 5. index: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -149,7 +149,7 @@ public class LinkedListClass {
 		 */
 		System.out.println("Deleted element: " +  singlyLinkedList.deleteFirst().getData());
 		System.out.println("Singly Linked List after deleting first element: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -157,7 +157,7 @@ public class LinkedListClass {
 		 */
 		System.out.println("Deleted element: " +  singlyLinkedList.deleteLast().getData());
 		System.out.println("Singly Linked List after deleting last element: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
 		System.out.println("*********************************************");
 		
 		/*
@@ -165,7 +165,49 @@ public class LinkedListClass {
 		 */
 		System.out.println("Deleted element: " +  singlyLinkedList.deleteAt(5).getData());
 		System.out.println("Singly Linked List after deleting given element: ");
-		singlyLinkedList.printLinkedList(singlyLinkedList.getHead());
+		singlyLinkedList.printLinkedList();
+		System.out.println("*********************************************");
+		
+		/*
+		 * Check if value contains or not
+		 */
+		String isContains = singlyLinkedList.contains(8) ? "List contains the value" : "List does not contain the value";
+		System.out.println("The list contains the value or not : " + isContains);
+		
+		Node node = singlyLinkedList.getByValue(8);
+		System.out.println("The Node : " + node.getData());
+		System.out.println("*********************************************");
+		
+		/*
+		 * Reverse Recursively Singly Linked List
+		 */
+		Node head1 = singlyLinkedList.reverseRecursively();
+		singlyLinkedList.setHead(head1);
+		System.out.println("Reversed Recursively Singly Linked List : ");
+		singlyLinkedList.printLinkedList();
+		System.out.println("*********************************************");
+
+		/*
+		 * Reverse Iteratively Singly Linked List
+		 */
+		Node head2 = singlyLinkedList.reverseIteratively();
+		singlyLinkedList.setHead(head2);
+		System.out.println("Reversed Iteratively Singly Linked List : ");
+		singlyLinkedList.printLinkedList();
+		System.out.println("*********************************************");
+		
+		/*
+		 * Find the middle of the list
+		 */
+		Node middleNode = singlyLinkedList.findMiddle();
+		System.out.println("Middle Node in the list : " + middleNode.getData());
+		System.out.println("*********************************************");
+		
+		/*
+		 * Find the nth node from the end of the list
+		 */
+		Node nthNodeFromTheEnd = singlyLinkedList.findNthNodeFromTheEnd(4);
+		System.out.println("The nth node from the end in the list : " + nthNodeFromTheEnd.getData());
 		System.out.println("*********************************************");
 	}
 }

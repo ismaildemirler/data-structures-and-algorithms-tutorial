@@ -9,6 +9,10 @@ public class _SinglyLinkedList {
 		private int data;
 		private Node next;
 		
+		public Node() {
+			
+		}
+		
 		public Node(int data) {
 			this.setData(data);
 			this.setNext(null);
@@ -170,7 +174,140 @@ public class _SinglyLinkedList {
 		}
 	}
 	
-	public void printLinkedList(Node head) {
+	public Node getByValue(int value) {
+		Node current = head;
+		
+		while(current.next != null) {
+			if(current.data == value) {
+				return current;
+			}
+			current = current.next;
+		}
+		return new Node();
+	}
+	
+	public boolean contains(int value) {
+		Node current = head;
+		
+		while(current.next != null) {
+			if(current.data == value) {
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
+	}
+	
+	public Node reverseRecursively() {
+		return reverseRecursively(head);		
+	}
+	
+	public Node reverseIteratively() {
+		return reverseIteratively(head);
+	}
+	
+	private Node reverseRecursively(Node node) {
+		if (node == null || node.next == null) {
+			return node;
+		}
+		 
+		Node current = reverseRecursively(node.next);
+		node.next.next = node;
+		node.next = null;
+		return current;
+	}
+	
+	private Node reverseIteratively(Node head) {
+		if (head == null) {
+			return head;
+		}
+		
+		Node current = head;
+		Node previous = null;
+		Node next = null;
+		
+		while (current != null) {
+			next = current.next;
+			current.next = previous;
+			previous = current;
+			current = next;
+		}
+		return previous;
+	}
+	
+	public Node findMiddle() {
+		if (head == null) {
+			return null;
+		}
+		
+		Node slowPtr = head;
+		Node fastPtr = head;
+		
+		while (fastPtr != null && fastPtr.next != null) {
+			slowPtr = slowPtr.next;
+			fastPtr = fastPtr.next.next;
+		}
+		return slowPtr;
+	}
+
+	public Node findNthNodeFromTheEnd(int number) {
+		if(head == null) {
+			return null;
+		}
+		
+		if (number <= 0) {
+			System.out.println("Enter valid number!");
+			return null;
+		}
+		
+		Node mainPtr = head;
+		Node refPtr = head;
+		
+		int count = 0;
+		
+		while (count < number) {
+			if (refPtr == null) {
+				System.out.println("Number is greater than the number of nodes in the list!");
+				return null;
+			}
+			refPtr = refPtr.next;
+			count++;
+		}
+		
+		while (refPtr != null) {
+			refPtr = refPtr.next;
+			mainPtr = mainPtr.next;
+		}
+		return mainPtr;
+	}
+
+	public Node insertNodeInSortedList(int value) {
+		Node node = new Node(value);		
+		Node current = head;
+		Node previous = null;
+		
+		while (current != null && current.getData() < value) {
+			previous = current;
+			current = current.next;
+		}
+		previous.next = node;
+		node.next = current;
+		return head;
+	}
+	
+	public void deleteNode(int value) {
+		Node current = head;
+		Node previous = null;
+		
+		while(current != null && current.data != value) {
+			previous = current;
+			current = current.next;
+		}
+		
+		previous.next = current.next;
+	}
+	
+	public void printLinkedList() {
 		Node current = head;
 		while(current != null) {
 			System.out.print(current.data + " --> ");
