@@ -31,9 +31,9 @@ public class TreeClass {
 						
 									    A Binary Tree Example
 										
-												[[1]]  --> root
-											 /         \
-										[[2]]           [[3]]
+										        [[1]]  --> root
+									         /         \
+						                [[2]]           [[3]]
 									   /     \         /     \
 	 					  leaf ---> [[4]]   [[5]]   [[6]]   [[7]] --> leaf
 	 					  
