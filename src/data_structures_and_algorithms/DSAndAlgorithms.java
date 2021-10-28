@@ -5,6 +5,7 @@ import data_structures_and_algorithms.analysis.BigONotation;
 import data_structures_and_algorithms.linkedlist.LinkedListClass;
 import data_structures_and_algorithms.queue.QueueClass;
 import data_structures_and_algorithms.stack.StackClass;
+import data_structures_and_algorithms.tree.TreeClass;
 
 public class DSAndAlgorithms {
 
@@ -28,8 +29,11 @@ public class DSAndAlgorithms {
 //		StackClass stackClass = new StackClass();
 //		stackClass.stack();
 		
-		QueueClass queueClass = new QueueClass();
-		queueClass.queue();
+//		QueueClass queueClass = new QueueClass();
+//		queueClass.queue();
+		
+		TreeClass treeClass = new TreeClass();
+		treeClass.binaryTree();
 	}
 	
 	public static void introductionToDataStructures() {
