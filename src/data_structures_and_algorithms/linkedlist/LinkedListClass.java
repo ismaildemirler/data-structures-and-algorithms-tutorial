@@ -1,6 +1,6 @@
-package data_structures_and_algorithms.b_linkedlist;
+package data_structures_and_algorithms.linkedlist;
 
-import data_structures_and_algorithms.b_linkedlist._SinglyLinkedList.Node;
+import data_structures_and_algorithms.linkedlist._SinglyLinkedList.Node;
 
 public class LinkedListClass {
 	

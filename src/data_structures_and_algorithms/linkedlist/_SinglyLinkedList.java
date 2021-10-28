@@ -1,4 +1,4 @@
-package data_structures_and_algorithms.b_linkedlist;
+package data_structures_and_algorithms.linkedlist;
 
 public class _SinglyLinkedList {
 

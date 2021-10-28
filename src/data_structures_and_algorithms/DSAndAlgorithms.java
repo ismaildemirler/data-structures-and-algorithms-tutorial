@@ -1,8 +1,8 @@
 package data_structures_and_algorithms;
 
-import data_structures_and_algorithms.a_analysis.AlgorithmAnalysis;
-import data_structures_and_algorithms.a_analysis.BigONotation;
-import data_structures_and_algorithms.b_linkedlist.LinkedListClass;
+import data_structures_and_algorithms.analysis.AlgorithmAnalysis;
+import data_structures_and_algorithms.analysis.BigONotation;
+import data_structures_and_algorithms.linkedlist.LinkedListClass;
 
 public class DSAndAlgorithms {
 

@@ -1,4 +1,4 @@
-package data_structures_and_algorithms.a_analysis;
+package data_structures_and_algorithms.analysis;
 
 import java.util.Iterator;
 
