@@ -3,6 +3,8 @@ package data_structures_and_algorithms;
 import data_structures_and_algorithms.analysis.AlgorithmAnalysis;
 import data_structures_and_algorithms.analysis.BigONotation;
 import data_structures_and_algorithms.linkedlist.LinkedListClass;
+import data_structures_and_algorithms.queue.QueueClass;
+import data_structures_and_algorithms.stack.StackClass;
 
 public class DSAndAlgorithms {
 
@@ -20,8 +22,14 @@ public class DSAndAlgorithms {
 //		bigONotation.exponentialTime();
 //		bigONotation.factorialTime();
 		
-		LinkedListClass linkedListClass = new LinkedListClass();
-		linkedListClass.singlyLinkedList();
+//		LinkedListClass linkedListClass = new LinkedListClass();
+//		linkedListClass.singlyLinkedList();
+		
+//		StackClass stackClass = new StackClass();
+//		stackClass.stack();
+		
+		QueueClass queueClass = new QueueClass();
+		queueClass.queue();
 	}
 	
 	public static void introductionToDataStructures() {
