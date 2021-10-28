@@ -33,9 +33,9 @@ public class TreeClass {
 										
                                                 [[1]]  --> root
                                              /         \
-						                [[2]]           [[3]]
+                                        [[2]]           [[3]]
                                        /     \         /     \
-	 					  leaf ---> [[4]]   [[5]]   [[6]]   [[7]] --> leaf
+                          leaf ---> [[4]]   [[5]]   [[6]]   [[7]] --> leaf
 	 					  
 	 					       
 	 					     null <--- [[left]][[data]][[right]] ---> null
