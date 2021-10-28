@@ -38,8 +38,8 @@ public class TreeClass {
                           leaf ---> [[4]]   [[5]]   [[6]]   [[7]] --> leaf
 	 					  
 	 					       
-	 					     null <--- [[left]][[data]][[right]] ---> null
-	 					                       TreeNode
+                             null <--- [[left]][[data]][[right]] ---> null
+                                               TreeNode
 	 					                       
 	 * So a binary tree is basically represented by a tree node. So here you can tree node consists of
 	 * three things. One is data part which holds the data and pointer in the left which points the left
