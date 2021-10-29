@@ -40,4 +40,166 @@ public class GraphClass {
      * Names of people represent vertices of Graph.
      * Friendship between two people can be represented as an Edge of Graph.
 	 */
+	
+	/*
+	 * Applications - Web Content Over The Internet
+
+                 Webpage ----> [[google.com]]----[[udemy.com]]
+                        \          /        \                 \
+                        _\/       /          \                 \
+                         [[youtube.com]]----[[twitter.com]]----[[facebook.com]]
+
+	 * Graph helps us to organize web content over the internet.
+	 * Webpages such as google.com, udemy.com etc represent vertices of Graph.
+	 * A Link between two webgapes can be represented as an Edge of Graph.
+	 */
+	
+	/*
+	 * Adjacency Matrix Representation (Undirected Graph)
+
+                   vertex --> [[1]]------[[2]]
+                               |\         \  
+                               | \         \ -----> undirected edge
+                               |  \       [[5]]
+                               |   \     /
+                  vertex -->[[3]]---[[4]]    
+                                  |
+                                  |
+                                 \_/
+                            undirected edge (it has no direction)
+                            
+	 * Example - Social Networking Graph is an undirected graph
+	 * If Ali (vertex) is friend (edge) to Yusuf (vertex), than Yusuf (vertex) is
+	 * also friend (edge) to Ali
+
+                       [[Ali]]---------------[[Yusuf]]
+                                Friendship
+
+     * So this socail networking graph can be seen as an undirected graph where
+     * edges are undirected. The don't have any direction moving ahead. So, graph
+     * can be represented by a two dimensional array, which is nothing but matrix.
+
+                                           ___________________
+                                           ||               ||
+           [[0]]----------[[1]]            || 0 | 1 | 0 | 1 ||    
+             |              |              ||---------------||
+             |              |              || 1 | 0 | 1 | 0 ||
+             |              |              ||---------------||
+             |              |              || 0 | 1 | 0 | 1 ||
+           [[3]]----------[[2]]            ||---------------||
+                                           || 1 | 0 | 1 | 0 ||
+            undirected graph               ||_______________||
+                                           
+          [[row]]-------[[col]]            adjacency matrix[][]
+                    1
+                             
+	 */     
+	
+	/*
+	 * Adjacency List Representation (Undirected Graph)
+	 * 
+	 * It is another way to represent a undirected graph that is through adjacency list.
+	 * So this adjacency list nothing but an array of linked list.
+
+	                                           ___      |------------------------------|
+	      [[0]]----------[[1]]               0 | | ---> | [[1]][-]--> [[3]][-]--> null |
+	        |              |                   | |      |------------------------------|  
+	        |              |                   |-|      |------------------------------|
+	        |              |                 1 | | ---> | [[0]][-]--> [[2]][-]--> null |
+	        |              |                   |-|      |------------------------------|
+	      [[3]]----------[[2]]                 | |      |------------------------------|
+	                                         2 | |--->  | [[3]][-]--> [[1]][-]--> null |
+	       undirected graph                    |-|      |------------------------------|
+	                                           | |      |------------------------------|
+	                                         3 |_|--->  | [[2]][-]--> [[0]][-]--> null |
+	                                                    |------------------------------|
+	                                      array of linked lists
+	 
+	 * So here, you can see there are four nodes. So we can create an array of linked list
+	 * having the size four. So you can see each and every index hold the linked list. And
+	 * what is linked list contents. 
+	 * Vertex 0 can be represented as in the array index 0. The linked list which it holds,
+	 * has node 1 and node 3. So this structure tells us that from node 0, there is an edge
+	 * to 1 and there is an edge to node 3. These structure is also similar for other vertexes.
+	 */
+	
+	public void undirectedGraphImpl() {
+		
+		/*
+		 * Adjacency Matrix Representation
+		 */
+		
+		_MatrixImpl matrixImpl = new _MatrixImpl(4);
+		matrixImpl.addEdge(0, 1);
+		matrixImpl.addEdge(1, 2);
+		matrixImpl.addEdge(2, 3);
+		matrixImpl.addEdge(3, 0);
+
+		System.out.println("Representing graph by using matrix : ");
+		System.out.println(matrixImpl);
+		System.out.println("***************************************");
+		
+		/*
+		 * Adjacency List Representation
+		 */
+		_ListImpl listImpl = new _ListImpl(4);
+		listImpl.addEdge(0, 1);
+		listImpl.addEdge(1, 2);
+		listImpl.addEdge(2, 3);
+		listImpl.addEdge(3, 0);
+
+		System.out.println("Representing graph by using array of linked list : ");
+		System.out.println(listImpl);		
+		System.out.println("***************************************");
+		
+		/*
+		 * Bread First Search
+		 * (Undirected Graph)
+		 */
+		breadthFirstSeacrh();
+	}
+	
+	public void breadthFirstSeacrh() {
+		
+		/*
+		 * Breadth First Search (BFS)
+
+                   [[0]]----------[[1]]
+                     |              |
+                     |              |
+                     |              |   [[4]]
+                     |              |   /
+                     |              |  /
+                   [[3]]----------[[2]]
+                   
+		 * What do we mean by level order?
+		 * Let's suppose we start from 0.
+		 * Level 1 --> Node 0 visited
+		 * Level 2 --> Node 1 and Node 3 visited
+		 * Level 3 --> Node 2 visited
+		 * Level 4 --> Node 4 visited
+		 * 
+		 * So using BFS we can traverse the graph level by level.
+		 * In this algorithm we usually use queue data structure. Queue data structure 
+		 * let's first in first out, so the element inserted into this data structure 
+		 * first will be first to be removed from the queue. So we are using queue because
+		 * it will help us in traversing the nodes of a graph level by level. We applied
+		 * same algorithm while we are traversing the tree. But there is a slight catch in
+		 * the graph. Because in the graphs it may contain a cycle so therefore we need to
+		 * keep track of the nodes which have been visited. We usually keep the track of the 
+		 * nodes into a boolean array.
+		 */
+		
+		_ListImpl listImpl = new _ListImpl(5);
+		listImpl.addEdge(0, 1);
+		listImpl.addEdge(1, 2);
+		listImpl.addEdge(2, 3);
+		listImpl.addEdge(3, 0);
+		listImpl.addEdge(2, 4);
+
+		System.out.println(listImpl);	
+		
+		System.out.println("Breadth First Search : ");
+		listImpl.bfs(0);
+	}
 }
