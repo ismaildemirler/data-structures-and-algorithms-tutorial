@@ -1,12 +1,12 @@
 package data_structures_and_algorithms.tree;
 
+import java.util.Iterator;
+
 import com.sun.source.tree.BinaryTree;
 import com.sun.source.tree.ExpressionTree;
 import com.sun.source.tree.TreeVisitor;
 
 import data_structures_and_algorithms.tree._BinaryTree.Node;
-
-import com.sun.source.tree.Tree.Kind;
 
 public class TreeClass {
 	
@@ -138,5 +138,127 @@ public class TreeClass {
 		System.out.println("Maximum Number In The Binary Tree : " 
 				+ binaryTree.findMaximumNumber(binaryTree.getRoot()));
 		System.out.println("*********************************************");
+	}
+
+	public void binarySearchTree() {
+		
+		/*
+		 * Binary Search Tree In Java
+		 */
+		
+		/*
+		 * What is a Binary Search Tree?
+		 * 
+		 * It is a type of Binary Tree in which data is organized in an ordered manner which helps in 
+		 * faster search and insertion of data. It satisfies following properties:
+
+		   - The left subtree of a node contains only nodes with values lesser than the node's value.
+		   - The right subtree of a node contains only nodes with values greater than the node's value.
+		   - The left and right subtree each must also be a binary search tree.
+		 */
+		
+		/*
+		 * Generating Binary Search Tree
+		 */
+		
+		_BinarySearchTree searchTree = new _BinarySearchTree();
+		
+		searchTree.insert(7);
+		searchTree.insert(4);
+		searchTree.insert(9);
+		searchTree.insert(11);
+		searchTree.insert(3);
+		searchTree.insert(2);
+		searchTree.insert(5);
+		searchTree.insert(8);
+		searchTree.insert(6);
+		
+		searchTree.print();
+		
+		/*
+		 * Searching A Key in Binary Search Tree
+		 */
+		int node = searchTree.search(1);
+		System.out.println("Wanted Node : " + node);
+		System.out.println("***************************************");
+	}
+
+	public void matrixExample() {
+		
+		/*
+		 * Q. Given a row and column wise (nxn) sorted matrix. Write a program to seacrh a key in a given matrix.
+		   
+		   _______________________	
+		   ||                   ||
+		   || 10 | 20 | 30 | 40 ||
+		   ||-------------------||
+		   || 15 | 25 | 35 | 45 ||
+		   ||-------------------||
+		   || 27 | 29 | 37 | 48 ||
+		   ||-------------------||
+		   || 32 | 33 | 39 | 51 ||
+		   ||___________________||
+		          
+		          matrix[][]
+		   
+		 */
+		
+		/*
+		 * Answer:
+		 */
+		int[][] matrix = {
+						  { 10, 20, 30, 40 }, 
+						  { 15, 25, 35, 45 }, 
+						  { 27, 29, 37, 48 }, 
+						  { 32, 33, 39, 51 }
+						 };
+		searchInMatrix(matrix, 0, 0, 4, 48);
+		System.out.println("*********************************");
+		searchInSortedMatrix(matrix, 4, 33);
+		System.out.println("*********************************");
+	}
+	
+	private int searchInMatrix(int[][] matrix, int i, int j, int n, int wanted) {
+		if (i >= n ||  j >= n) {
+			return -1;
+		}
+		
+		if (matrix[i][j] == wanted) {
+			System.out.println(wanted + " has found at " + i + ". " 
+					+ j + ". indexes");
+			return wanted;
+		}
+		
+		int result = searchInMatrix(matrix, i, ++j, n, wanted);
+		if (result == -1) {
+			j = 0;
+			result = searchInMatrix(matrix, ++i, j, n, wanted);
+		}
+		
+		if (result == -1) {
+			result = searchInMatrix(matrix, ++i, ++j, n, wanted);
+		}
+		
+		return result;
+	}
+
+	private void searchInSortedMatrix(int[][] matrix, int n, int wanted) {
+		int i = 0; 
+		int j = n - 1;
+		
+		while (i < n && j >= 0) {
+			if (matrix[i][j] == wanted) {
+				System.out.println(wanted + " has found at " + i + ". " 
+						+ j + ". indexes");
+				return;
+			}
+			if (matrix[i][j] > wanted) {
+				j--;
+			} 
+			else {
+				i++;
+			}
+		}
+		System.out.println(wanted + " has not found!");
 	}
 }

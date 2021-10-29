@@ -32,8 +32,12 @@ public class DSAndAlgorithms {
 //		QueueClass queueClass = new QueueClass();
 //		queueClass.queue();
 		
-		TreeClass treeClass = new TreeClass();
-		treeClass.binaryTree();
+//		TreeClass treeClass = new TreeClass();
+//		treeClass.binaryTree();
+//		treeClass.binarySearchTree();
+//		treeClass.matrixExample();
+		
+		
 	}
 	
 	public static void introductionToDataStructures() {
