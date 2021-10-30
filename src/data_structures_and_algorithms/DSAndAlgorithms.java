@@ -1,12 +1,10 @@
 package data_structures_and_algorithms;
 
-import data_structures_and_algorithms.analysis.AlgorithmAnalysis;
-import data_structures_and_algorithms.analysis.BigONotation;
-import data_structures_and_algorithms.graph.GraphClass;
-import data_structures_and_algorithms.linkedlist.LinkedListClass;
-import data_structures_and_algorithms.queue.QueueClass;
-import data_structures_and_algorithms.stack.StackClass;
-import data_structures_and_algorithms.tree.TreeClass;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import data_structures_and_algorithms.sorting.MergeSort;
 
 public class DSAndAlgorithms {
 
@@ -38,8 +36,11 @@ public class DSAndAlgorithms {
 //		treeClass.binarySearchTree();
 //		treeClass.matrixExample();
 		
-		GraphClass graphClass = new GraphClass();
-		graphClass.undirectedGraphImpl();
+		MergeSort mergeSort = new MergeSort();
+		mergeSort.mergeSort();
+		
+//		GraphClass graphClass = new GraphClass();
+//		graphClass.undirectedGraphImpl();	
 	}
 	
 	public static void introductionToDataStructures() {
