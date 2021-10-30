@@ -2,6 +2,7 @@ package data_structures_and_algorithms.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class _ListImpl {
 	
@@ -41,6 +42,53 @@ public class _ListImpl {
 					visited[v] = true;
 					queue.offer(v);
 				}
+			}
+		}
+	}
+	
+	/*
+	 * Iterative
+	 */
+	public void dfs(int node) {
+		boolean[] visited = new boolean[v];
+		
+		Stack<Integer> stack = new Stack<>();
+		stack.push(node);
+		
+		while (!stack.isEmpty()) {
+			int u = stack.pop();
+
+			if (!visited[u]) {
+				visited[u] = true;
+				System.out.print(u + " ");
+				
+				for (int v : adj[u]) {
+					if (!visited[v]) {
+						stack.push(v);
+					}
+				}
+			}
+		}
+	}
+	
+	/*
+	 * Recursive
+	 */
+	public void dfs() {
+		boolean[] visited = new boolean[v];
+		for (int i = 0; i < v; i++) {
+			if (!visited[i]) {
+				dfs(i, visited);
+			}
+		}
+	}
+
+	private void dfs(int i, boolean[] visited) {
+		visited[i] = true;
+		System.out.print(i + " ");
+		for (int w : adj[i]) {
+			if (!visited[w]) {
+				dfs(w, visited);
 			}
 		}
 	}

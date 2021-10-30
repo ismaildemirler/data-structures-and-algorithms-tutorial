@@ -157,9 +157,15 @@ public class GraphClass {
 		 * (Undirected Graph)
 		 */
 		breadthFirstSeacrh();
+		
+		/*
+		 * Depth First Search
+		 * (Undirected Graph)
+		 */
+		depthFirstSearch();
 	}
 	
-	public void breadthFirstSeacrh() {
+	private void breadthFirstSeacrh() {
 		
 		/*
 		 * Breadth First Search (BFS)
@@ -201,5 +207,78 @@ public class GraphClass {
 		
 		System.out.println("Breadth First Search : ");
 		listImpl.bfs(0);
+		System.out.println("");
+		System.out.println("*************************");
+	}
+	
+	private void depthFirstSearch() {
+		
+		/*
+		 * Depth First Search (DFS)
+		 * Iterative Way
+
+                   [[0]]----------[[1]]
+                     |              |
+                     |              |
+                     |              |   [[4]]
+                     |              |   /
+                     |              |  /
+                   [[3]]----------[[2]]
+                   
+		 * We will discuss the iterative way to perform depth first search traversal of a graph.
+		 * Here, you can see that we are given an undirected graph. So by undirected graph we 
+		 * mean that i just don't have a direction. So if you are on any particular node, let's
+		 * say 0, then we can go to 1. And if you are on 1, then we can go to 0. So the edges
+		 * don't have any direction. Therefore, this is an undirected graph. So you are going to
+		 * see the algorithm to perform that first search of undirected graph. We are using Stack
+		 * in this algorithm.
+		 */
+		
+		_ListImpl listImpl1 = new _ListImpl(5);
+		listImpl1.addEdge(0, 1);
+		listImpl1.addEdge(1, 2);
+		listImpl1.addEdge(2, 3);
+		listImpl1.addEdge(3, 0);
+		listImpl1.addEdge(2, 4);
+
+		System.out.println(listImpl1);	
+		
+		System.out.println("Depth First Search : ");
+		listImpl1.dfs(0);
+		System.out.println("");
+		System.out.println("*************************");
+		
+		
+		/*
+		 * Depth First Search (DFS)
+		 * Recursive Way
+
+                   [[0]]----------[[1]]
+                     |              |
+                     |              |
+                     |              |   [[4]]
+                     |              |   /
+                     |              |  /          [[5]]
+                   [[3]]----------[[2]]
+                   
+		 * We can see here, 0, 1, 2, 3, 4 they are connected together. But there is one more node
+		 * which is 5. So this vertex is not connected with the rest of the elements. So basically,
+		 * a graph is provided like that, there could be components, which are basically disconnected.
+		 * So we need to visit this graph, and it's each vertex. So here we actually use the for loop
+		 * which drives each and every vertex and help us visiting the vertex using their first search.
+		 */
+		
+		_ListImpl listImpl2 = new _ListImpl(6);
+		listImpl2.addEdge(0, 1);
+		listImpl2.addEdge(1, 2);
+		listImpl2.addEdge(2, 3);
+		listImpl2.addEdge(3, 0);
+		listImpl2.addEdge(2, 4);
+		
+		System.out.println(listImpl2);	
+		
+		listImpl2.dfs();
+		System.out.println("");
+		System.out.println("*************************************");
 	}
 }
